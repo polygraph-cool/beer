@@ -1,16 +1,17 @@
 {
-	"title": "Title Case Headline Goes Here",
+	"title": "What city is the microbrew capital of the US?",
 	"description":
-		"Your dek goes here. It is probably one or two sentences that succinctly describe more explicitly what the story will be about.",
-	"url": "https://pudding.cool/year/month/name/",
-	"keywords": "tk",
+		"Using beer review data to rank the best cities in the country",
+	"url": "https://pudding.cool/2017/04/beer/",
+	"keywords":
+		"Beer, craft, microbrew, brewery, rating, city, data, visualization",
 	"imgFacebook":
-		"https://pudding.cool/year/month/name/assets/social/social-facebook.jpg",
+		"https://pudding.cool/2017/04/beer/assets/social/social-facebook.jpg",
 	"imgTwitter":
-		"https://pudding.cool/year/month/name/assets/social/social-twitter.jpg",
+		"https://pudding.cool/2017/04/beer/assets/social/social-twitter.jpg",
 	"author": {
-		"name": "Author Name",
-		"url": "https://twitter.com/puddingviz",
-		"twitterHandle": "@puddingviz"
+		"name": "Russell Goldenberg",
+		"url": "https://twitter.com/codenber",
+		"twitterHandle": "@codenberg"
 	}
 }
