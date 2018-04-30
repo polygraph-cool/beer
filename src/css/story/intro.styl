@@ -1,0 +1,57 @@
+.intro
+	position relative
+	background transparent
+	z-index 1
+	height 100vh
+	&__custom
+		margin 0 auto
+		max-width 60rem
+		padding 1rem
+		padding-top 5rem
+		+mq('full')
+			padding-top 10rem
+	&__hed
+		font-weight 700
+		font-size 2rem
+		+mq('full')
+			font-size 3rem
+		span 
+			opacity 0
+			transition opacity 500ms ease-in-out
+			&.is-visible
+				opacity 1
+	&__byline
+		// position absolute
+		// top 5rem
+		left 0
+		width 100%
+		// text-align center
+		line-height 1
+		padding-bottom 1em
+		padding-left 0.3em
+		text-transform uppercase
+		font-size 0.8rem
+		letter-spacing 0.05em
+	
+	&__prompt
+		position absolute
+		width 48px
+		height 26px
+		bottom 3rem
+		left 50%
+		margin-left -24px
+		animation bounce 2s infinite
+		opacity 0
+		transition 500ms opacity
+		&.is-reveal
+			opacity 0.5
+		svg path
+			fill $gray-dark
+
+@keyframes bounce
+	0%
+		transform translateY(0)
+	50%
+		transform translateY(-5px)
+	100%
+		transform translateY(0)

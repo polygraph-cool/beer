@@ -1,0 +1,42 @@
+body
+	font-size 17px
+	background-color $beer
+	color $off-black
+	
+main
+	overflow-y hidden
+	height 101vh 
+	&.is-reveal
+		height auto
+		overflow-y auto
+
+p 
+	line-height 1.7
+	
+a
+	color $primary
+	
+.hed--section
+	font-weight bold
+	font-size 1.75rem
+	+mq('full')
+		font-size 2rem
+
+svg text
+	font-family $atlas, $sans
+
+.outro
+	border-top 1px solid $gray-light
+	max-width 40rem
+	margin 3rem auto
+	padding 0.75rem
+	
+	p
+		margin 0
+		font-size 0.85rem
+
+footer.pudding-footer
+	background-color darken($beer, 5)
+	display none
+	&.is-reveal
+		display block

@@ -1,0 +1,109 @@
+.graphic__trend
+	max-width 70rem
+	width 95%
+	margin 2rem auto
+	position relative
+	.trend__transition
+		max-width 40rem
+		margin 4rem auto
+		+mq('full')
+			margin 6rem auto
+	.trend__intro
+		+mq('full')
+			position absolute
+			top 10rem
+			left 33%
+			max-width 30rem
+			width 100%
+			margin 0 auto
+			transform translate(-50%, 0)
+			background-color $beer
+			padding 0.5rem 1rem
+		p
+			margin 0
+	.hed--section
+		margin 0
+		margin-bottom 0.5rem
+
+	.trend__chart--all
+		font-feature-settings 'tnum' 1
+		.all__path
+			stroke $primary
+			stroke-width 3px
+			fill none
+			stroke-linecap round
+		.g-axis text
+			fill $gray-dark
+		.g-axis path, line
+			stroke $gray-light
+		.axis--y
+			stroke-dasharray 4px 4px
+			path 
+				display none
+			.tick:nth-child(3)
+				display none
+		.y-label
+			text-transform uppercase
+			letter-spacing 0.05em
+			font-size 11px
+				
+	.trend__chart--state
+		font-feature-settings 'tnum' 1
+		display flex
+		justify-content left
+		flex-wrap wrap
+		.state__label
+			font-size 12px
+			text-align center
+			width 100%
+			position absolute
+			top 25%
+			left 0
+			transform translateY(-50%)
+			margin 0
+		.state__line
+			stroke $off-black
+			stroke-linecap round
+			stroke-width 2px
+			stroke-opacity 0.75
+		.state__area
+			fill-opacity 0.75
+		
+		.g-axis text
+			fill $gray-dark
+		.g-axis path
+			stroke $gray-light
+		.g-axis line
+			stroke $gray-light
+			stroke-dasharray 4px 4px
+		
+		.axis--y
+			stroke-dasharray 4px 4px
+			path 
+				display none
+			.tick:nth-child(1)
+				display none
+				
+	.chart__state
+		position relative
+		display block
+		width 50%
+		padding 0 1rem
+		+mq('full')
+			width 16.66%
+			padding 0 1rem
+	
+	.trend__hed
+		font-feature-settings 'tnum' 1
+		text-align center
+		text-transform uppercase
+		font-size 0.8rem
+		letter-spacing 0.05em
+		font-weight 500
+		margin 0
+
+	.trend__dek
+		font-size 0.8rem
+		font-weight 400
+		text-align center
+		margin 0

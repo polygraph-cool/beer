@@ -1,0 +1,48 @@
+<div class='graphic__explore'>
+	<div class='explore__filter'>
+		<p>Cities with at least
+			<select data-col='nearby'>
+				<option>1</option>
+				<option>3</option>
+				<option selected>5</option>
+			</select>
+			breweries within
+			<select data-col='dist'>
+				<option>5</option>
+				<option>10</option>
+				<option selected>20</option>
+				<option>50</option>
+			</select> miles based on
+			<select data-col='abv'>
+				<option>light</option>
+				<option>medium</option>
+				<option>heavy</option>
+				<option selected>all</option>
+			</select> beers.</p>
+		<div class='chart__key tk-atlas'>
+			<p>Average rating of all beers</p>
+			<p>Number of breweries nearby</p>
+		</div>
+		<div class='explore__slider slider tk-atlas'></div>
+		<div class='slider__result tk-atlas'>
+			<p class='result__quality'>80%</p>
+			<p class='result__quantity'>20%</p>
+		</div>
+		<ul class='explore__toggle tk-atlas'>
+			<li class='is-selected'>Chart</li>
+			<li>Table</li>
+		</ul>
+	</div>
+	<div class='explore__chart tk-atlas'>
+		<svg></svg>
+		<div class='chart__note'>
+			<p>
+				<strong>Note:</strong> Brewery counts are lower than the number that actually exist due to criteria restrictions to account for
+				lack of data. See methodology below.</p>
+		</div>
+	</div>
+	<div class='explore__transition'>
+		<p>It should come as no surprise that picking ‘‘the best’’ city is highly subjective, even for a computer. Regardless of the
+			results, there is no doubt that the beer scene has swept across the country. Let’s see just how trendy it is.</p>
+	</div>
+</div>

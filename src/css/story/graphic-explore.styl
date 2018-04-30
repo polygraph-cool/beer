@@ -1,0 +1,278 @@
+.graphic__explore	
+	font-feature-settings 'tnum' 1
+	.is-hidden
+		opacity 0
+	.explore__chart
+		position relative
+		// border-bottom 1px solid $gray-light
+		width 95%
+		margin 0 auto
+	.explore__filter
+		max-width 60rem
+		margin 0 auto
+		padding 0 0.75rem
+		p
+			font-size 1.1rem
+			line-height 1.7
+			text-align center
+			margin 0
+			+mq('full')
+				font-size 1.5rem
+			
+	.explore__toggle
+		width 100%
+		max-width 20rem
+		margin 1rem auto 0 auto
+		display flex
+		+mq('full')
+			display none
+		li 
+			cursor pointer
+			width 50%
+			text-align center
+			text-transform uppercase
+			font-size 0.8rem
+			font-weight 400
+			letter-spacing 0.05em
+			border 1px solid $gray
+			padding 0.25em 0
+			border-radius 3px
+			&:first-child
+				border-right none
+				border-top-right-radius 0
+				border-bottom-right-radius 0
+			&:last-child
+				border-left none
+				border-top-left-radius 0
+				border-bottom-left-radius 0
+			&.is-selected
+				background-color $gray-light
+	.step__text
+		display none
+		background rgba(236, 230, 223, 1)
+		padding 0.5rem
+		box-shadow 0 0 1rem 0.5rem $beer
+
+	.table__title
+		font-size 12px
+		fill $off-black
+		font-weight bold
+		text-transform uppercase
+		letter-spacing 0.05em
+	.connector
+		fill none
+		stroke $gray-light
+		stroke-dasharray 2px 2px
+		visibility hidden
+		&.is-visible
+			visibility visible
+
+	.cities-axis text
+		fill $off-black
+		font-size 12px
+		text-transform uppercase
+		letter-spacing 0.05em
+	
+	.target
+		text
+			fill $gray
+			font-size 12px
+			// text-transform uppercase
+			letter-spacing 0.05em
+			font-weight 400
+		circle
+			// fill-opacity 0
+			fill $gray
+			// stroke $off-black
+	
+	.cities-axis line 
+		stroke $gray
+		stroke-width 1px
+		stroke-dasharray 4px 4px
+	
+	.city
+		circle
+			fill-opacity 0.75
+			pointer-events none
+			opacity 1
+			transition 100ms opacity
+		&.is-faded circle
+			opacity 0.65
+		&.is-active circle
+			fill-opacity 1
+			opacity 1
+			stroke $off-black
+			stroke-width 2px
+	
+	.g-tooltip
+		visibility hidden
+		pointer-events none
+		&.is-visible
+			visibility visible
+			
+	.tooltip__text
+		font-size 12px
+		font-weight 500
+		fill $off-black
+		opacity 1
+		&.shadow
+			fill-opacity 0
+			stroke $beer
+			stroke-width 3px
+	
+	.tooltip__quantity
+		font-size 10px
+		font-weight 500
+		fill $gray-dark
+		text-transform uppercase
+		letter-spacing 0.05
+		&.shadow
+			fill-opacity 0
+			stroke $beer
+			stroke-width 3px
+	
+	.tooltip__quality
+		font-size 10px
+		font-weight 500
+		fill $gray-dark
+		text-transform uppercase
+		letter-spacing 0.05
+		&.shadow
+			fill-opacity 0
+			stroke $beer
+			stroke-width 3px
+			
+	.g-table
+		.row
+			cursor pointer
+			&.is-connected text
+				font-weight 500
+				
+		text
+			fill $off-black
+			font-weight 400
+			letter-spacing 0.05em
+	
+		rect 
+			fill-opacity 0
+
+		.brews__label
+			text-transform uppercase
+			letter-spacing 0.05em
+			font-weight bold
+	
+	.table__brews
+		visibility hidden
+		pointer-events none
+		line
+			stroke $gray-light
+			stroke-dasharray 2px 2px
+		&.is-visible
+			visibility visible
+
+	.g-voronoi path
+		fill-opacity 0
+		stroke none
+		cursor pointer
+
+	.explore__slider 
+		display block
+		width 100%
+		max-width 20rem
+		margin 1.5rem auto 0 auto
+		// margin 0 auto
+		&:before
+			font-weight 500
+			font-size 0.75rem
+			color $off-black
+			text-transform uppercase
+			letter-spacing 0.05em
+			content 'Quality'
+			position absolute
+			display block
+			top 0
+			left 0
+			transform translateY(-125%)
+		
+		&:after
+			font-weight 500
+			font-size 0.75rem
+			color $off-black
+			text-transform uppercase
+			letter-spacing 0.05em
+			content 'Quantity'
+			position absolute
+			display block
+			top 0
+			right 0
+			transform translateY(-125%)
+	.slider__result
+		width 100%
+		max-width 20rem
+		margin 0.25rem auto 0 auto
+		display flex
+		p
+			width 50%
+			text-align left
+			&.result__quality, &.result__quantity
+				font-size 0.7rem
+				font-weight 500
+			&:last-child
+				text-align right
+	select 
+		background-color transparent
+		border none
+		font-weight bold
+		border-radius 0px
+		color $off-black
+		font-size 0.9rem
+		+mq('full')
+			font-size 1.4rem
+		outline none
+		text-align-last center
+		background $off-white
+		font-family 'Publico Text Web', $serif
+	
+	.chart__note
+		padding 1rem
+		color $gray
+		max-width 20rem
+		margin 0 auto
+		p
+			font-size 0.7rem
+			padding-top 0.5rem
+			border-top 1px solid $gray-light
+			display inline-block
+			max-width 20rem
+			text-align left
+		
+			
+	.chart__key
+		text-align center
+		display flex
+		max-width 40rem
+		margin 0.5rem auto 0 auto
+		justify-content space-around
+		color $gray
+		p 
+			border-bottom 1px dotted $gray-light
+			font-size 0.7rem
+		+mq('full')
+			p
+				font-size 0.75rem
+		// position absolute
+		// top 0
+		// right 0
+		// font-size 0.8em
+		// padding 0.5rem 0
+		// transform translateY(100%)
+		// +mq('full')
+			// transform translateY(0)
+			// padding 2rem 0
+	
+	.explore__transition
+		max-width 40rem
+		padding 0 0.75rem
+		margin 6rem auto 4rem auto
+		+mq('full')
+			margin 6rem auto

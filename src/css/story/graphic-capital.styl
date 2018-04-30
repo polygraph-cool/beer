@@ -1,0 +1,99 @@
+.graphic__capital
+	position relative
+	.capital__chart
+		transform translate3d(0, 0, 0)
+		position fixed
+		top 0
+		left 0
+		width 100%
+		opacity 0.5
+		&.is-bottom
+			position absolute
+			top auto
+			bottom 0
+	.overlay
+		position absolute
+		top 0 
+		left 0
+		width 100%
+		height 100%
+		box-shadow inset 0 0 30px 30px $beer
+		pointer-events none
+
+	.state__border
+		fill none
+		stroke $gray-light
+		stroke-width 1px
+		stroke-linecap round
+		stroke-linejoin round
+
+	.capital__prose
+		position relative
+		pointer-events none
+		margin-top 2rem
+		
+	.prose__step
+		height 320px
+		max-width 40rem
+		margin 0 auto
+		+mq('full')
+			height 100vh
+		&.small
+			.step__text
+				font-size 0.9rem
+				+mq('full')
+					font-size 1.1rem
+		&:last-child
+			+mq('full')
+				height 60vh
+		&.is-hidden
+			display none
+
+	.step__text
+		display none
+		background rgba($r, $g, $b, 1)
+		padding 0.75rem
+		box-shadow 0 0 1rem 0.5rem $beer
+		font-size 1.3rem
+		margin 0
+		+mq('full')
+			font-size 1.5rem
+		
+		&.is-visible
+			display block
+	
+	.g-map text
+		font-size 12px
+		text-transform uppercase
+		letter-spacing 0.05em
+		font-weight 500
+		fill $off-black
+	
+	.g-map circle
+		fill $off-black
+		stroke none
+	
+	.city circle
+		fill-opacity 0.75
+
+	.city text 
+		font-size 12px
+		text-transform uppercase
+		letter-spacing 0.05em
+		font-weight 500
+		fill $off-black
+		visibility hidden
+		pointer-events none
+		+mq('full')
+			visibility visible
+		&.text--bg
+			fill-opacity 0
+			stroke $beer
+			stroke-width 2px
+		
+	.map-cities
+		opacity 0
+	.map-custom
+		opacity 0
+	.map-best
+		opacity 0
