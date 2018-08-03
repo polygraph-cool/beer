@@ -493,8 +493,8 @@ function setupScroll() {
 	scroller
 		.setup({
 			step: '.prose__step',
-			container: '.capital__prose',
-			graphic: '.capital__chart',
+			// container: '.capital__prose',
+			// graphic: '.capital__chart',
 			offset: 0.33
 		})
 		.onStepEnter(({ element, direction }) => {
